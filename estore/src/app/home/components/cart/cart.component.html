@@ -8,7 +8,7 @@
   </div>
 </ng-container>
 <ng-container *ngIf="cartStore.cart$ | async as cart">
-  <div class="row my-5 fc-main-div">
+  <div *ngIf="cartStore.cart.products.length" class="row my-5 fc-main-div">
     <div class="col-8 p-4">
       <div class="row cart-item-card" *ngFor="let cartItem of cart.products">
         <div class="col-4">
@@ -37,7 +37,7 @@
                 <div class="btn btn-outline-dark">
                   <span>-</span>
                 </div>
-                <div>
+                <div class="btn">
                   {{ cartItem.quantity }}
                 </div>
                 <div class="btn btn-outline-dark">
@@ -53,8 +53,21 @@
             </div>
           </div>
         </div>
-        <hr/>
+        <hr />
       </div>
+    </div>
+    <div class="col-4 px-4 py-3 my-4 cart-summary">
+      <h2 class="mb-5 mt-3">Summary</h2>
+      <div>
+        <span>Cart Total: {{ cart.totalAmount | currency }}</span>
+        <span>Shipping Charges : Free</span>
+        <hr />
+        <span class="summary-total">
+          Total : {{ cart.totalAmount | currency }}
+        </span>
+        <hr />
+      </div>
+      <div class="btn btn-outline-dark w-100 mb-4 mt-1">Checkout</div>
     </div>
   </div>
 </ng-container>

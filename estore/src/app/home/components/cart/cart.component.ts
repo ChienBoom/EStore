@@ -19,7 +19,6 @@ export class CartComponent {
   }
 
   updateQuantity(event: any, cartItem: CartItem): void {
-    console.log(event.target.innerText);
     if (event.target.innerText === '+') {
       this.cartStore.addProduct(cartItem.product);
     } else if (event.target.innerText === '-') {
