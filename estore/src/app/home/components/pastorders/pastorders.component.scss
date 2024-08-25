@@ -1,18 +1,7 @@
-.ec-main-div {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-
-  .ec-text {
-    font-weight: 600;
-    font-size: 40px;
-  }
-}
-
 .fc-main-div {
-  padding: 6em;
+  margin: 2em 8em;
 
-  .cart-item-card {
+  .order-item-card {
     img {
       height: 200px;
       width: 200px;
@@ -20,8 +9,8 @@
       border-radius: 15px;
     }
 
-    .cart-item-details {
-      .cart-item-name {
+    .order-item-details {
+      .order-item-name {
         display: flex;
         justify-content: space-between;
         font-size: 1em;
@@ -29,13 +18,13 @@
       }
     }
 
-    .cart-edit-container {
+    .order-edit-container {
       display: flex;
       align-items: center;
     }
   }
 
-  .cart-summary {
+  .order-summary {
     background-color: aliceblue;
     border-radius: 20px;
     display: flex;
@@ -56,19 +45,4 @@
       font-weight: 500;
     }
   }
-}
-
-.field-margin {
-  margin-bottom: 1em;
-}
-
-.submit-button {
-  border-color: black;
-  width: 100%;
-}
-
-.submit-button:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
 }

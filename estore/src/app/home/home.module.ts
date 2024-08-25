@@ -18,6 +18,12 @@ import { ProductsGalleryComponent } from './components/products-gallery/products
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 import { CartStoreItem } from './services/cart/cart.storeItem';
 import { CartComponent } from './components/cart/cart.component';
+import { UserSignupComponent } from './components/users/user-signup/user-signup.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UserLoginComponent } from './components/users/user-login/user-login.component';
+import { UserService } from './services/user/user-service.service';
+import { OrderService } from './services/order/order.service';
+import { PastordersComponent } from './components/pastorders/pastorders.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +35,9 @@ import { CartComponent } from './components/cart/cart.component';
     ProductsGalleryComponent,
     ProductdetailsComponent,
     CartComponent,
+    UserSignupComponent,
+    UserLoginComponent,
+    PastordersComponent,
   ],
   imports: [
     CommonModule,
@@ -37,6 +46,7 @@ import { CartComponent } from './components/cart/cart.component';
     HttpClientModule,
     RouterModule,
     HomeRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     CategoryService,
@@ -44,6 +54,8 @@ import { CartComponent } from './components/cart/cart.component';
     ProductsService,
     ProductsStoreItem,
     CartStoreItem,
+    UserService,
+    OrderService
   ],
 })
 export class HomeModule {}
